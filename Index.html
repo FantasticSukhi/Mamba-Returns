@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamba Returns - Elevate Your Social Presence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+        }
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+        .glass-card {
+            background: rgba(16, 16, 16, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .hero-title {
+            text-shadow: 0 0 15px rgba(0, 255, 150, 0.5), 0 0 30px rgba(0, 255, 150, 0.3);
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(0, 201, 255, 0.4);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(146, 254, 157, 0.6);
+        }
+        .btn-secondary {
+             background: rgba(255, 255, 255, 0.1);
+             border: 1px solid rgba(255, 255, 255, 0.2);
+             transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .service-card-button {
+            background: rgba(0, 255, 150, 0.1);
+            border: 1px solid rgba(0, 255, 150, 0.3);
+            color: #92fe9d;
+        }
+        .service-card-button:hover {
+             background: rgba(0, 255, 150, 0.2);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="content-wrapper">
+        <header class="fixed top-0 left-0 right-0 z-50">
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center glass-card rounded-b-lg">
+                <h1 class="text-2xl font-bold text-white tracking-wider">Mamba Returns</h1>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#services" class="hover:text-green-300 transition-colors">Services</a>
+                    <a href="#how-it-works" class="hover:text-green-300 transition-colors">How It Works</a>
+                    <a href="#payment" class="hover:text-green-300 transition-colors">Payment</a>
+                    <a href="Templates/blogs.html" class="hover:text-green-300 transition-colors">Blogs</a>
+                    <a href="Templates/giveaway.html" class="hover:text-green-300 transition-colors">Giveaway</a>
+					<a href="Templates/about.html" class="hover:text-green-300 transition-colors">About Us</a>
+					</div>
+                <a href="https://t.me/GARUD_OWNER" target="_blank" class="btn-primary text-black font-bold py-2 px-5 rounded-lg text-sm">
+                    Contact Us
+                </a>
+            </nav>
+        </header>
+
+        <main class="min-h-screen flex items-center justify-center text-center px-4 pt-24 md:pt-0">
+            <div class="max-w-4xl">
+                <h2 class="text-5xl md:text-7xl lg:text-8xl font-black text-white hero-title tracking-tighter leading-tight">
+                    Elevate Your Social Influence
+                </h2>
+                <p class="mt-6 text-lg md:text-xl text-neutral-300 max-w-2xl mx-auto">
+                    Authentic growth across all major platforms. Likes, followers, views, and more to amplify your digital presence.
+                </p>
+                <p class="mt-4 text-xl font-semibold text-green-300 animate-pulse">
+                    "One Tree, One Life"
+                </p>
+                <div class="mt-10 flex justify-center gap-4">
+                    <a href="#services" class="btn-primary text-black font-bold py-3 px-8 rounded-lg">
+                        Explore Services
+                    </a>
+                    <a href="#how-it-works" class="btn-secondary text-white font-bold py-3 px-8 rounded-lg">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <section id="services" class="py-20 px-4">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h3 class="text-4xl font-bold text-white">Our Services</h3>
+                    <p class="text-neutral-400 mt-2">Comprehensive solutions for your social media growth.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Instagram -->
+                    <div class="glass-card p-8 rounded-2xl flex flex-col items-center text-center">
+                        <div class="w-20 h-20 mb-4 rounded-full bg-gradient-to-br from-purple-600 via-pink-600 to-yellow-500 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-10 h-10">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white mb-2">Instagram</h4>
+                        <p class="text-neutral-300 flex-grow">Followers, Likes, Reel Views, Comments, and more to boost your profile's engagement and reach.</p>
+                        <a href="Templates/instagram.html" class="mt-6 service-card-button font-bold py-2 px-6 rounded-lg w-full">View Details</a>
+                    </div>
+                    
+                    <!-- YouTube -->
+                    <div class="glass-card p-8 rounded-2xl flex flex-col items-center text-center">
+                        <div class="w-20 h-20 mb-4 rounded-full bg-red-600 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-10 h-10">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white mb-2">YouTube</h4>
+                        <p class="text-neutral-300 flex-grow">Subscribers, Views, Likes, Comments, and Watch Time to help monetize and grow your channel.</p>
+                        <a href="Templates/youtube.html" class="mt-6 service-card-button font-bold py-2 px-6 rounded-lg w-full">View Details</a>
+                    </div>
+                    
+                    <!-- Telegram -->
+                    <div class="glass-card p-8 rounded-2xl flex flex-col items-center text-center">
+                        <div class="w-20 h-20 mb-4 rounded-full bg-blue-500 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-10 h-10">
+                                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/>
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white mb-2">Telegram</h4>
+                        <p class="text-neutral-300 flex-grow">Channel/Group Members, Post Views, Reactions, and even ID selling services.</p>
+                        <a href="Templates/telegram.html" class="mt-6 service-card-button font-bold py-2 px-6 rounded-lg w-full">View Details</a>
+                    </div>
+                    
+                    <!-- Facebook -->
+                    <div class="glass-card p-8 rounded-2xl flex flex-col items-center text-center">
+                        <div class="w-20 h-20 mb-4 rounded-full bg-blue-600 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-10 h-10">
+                                <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/>
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white mb-2">Facebook</h4>
+                        <p class="text-neutral-300 flex-grow">Page Likes, Post Likes, Followers, and Comments to increase your social proof.</p>
+                        <a href="Templates/facebook.html" class="mt-6 service-card-button font-bold py-2 px-6 rounded-lg w-full">View Details</a>
+                    </div>
+                    
+                    <!-- Twitter (X) -->
+                    <div class="glass-card p-8 rounded-2xl flex flex-col items-center text-center">
+                        <div class="w-20 h-20 mb-4 rounded-full bg-black flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-10 h-10">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white mb-2">Twitter (X)</h4>
+                        <p class="text-neutral-300 flex-grow">Boost your tweets and profile with our comprehensive engagement services.</p>
+                        <a href="Templates/twitter.html" class="mt-6 service-card-button font-bold py-2 px-6 rounded-lg w-full">View Details</a>
+                    </div>
+                    
+                    <!-- WhatsApp -->
+                    <div class="glass-card p-8 rounded-2xl flex flex-col items-center text-center">
+                        <div class="w-20 h-20 mb-4 rounded-full bg-green-500 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-10 h-10">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white mb-2">WhatsApp</h4>
+                        <p class="text-neutral-300 flex-grow">Specialized services for WhatsApp marketing and engagement strategies.</p>
+                        <a href="Templates/whatsapp.html" class="mt-6 service-card-button font-bold py-2 px-6 rounded-lg w-full">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="py-20 px-4 bg-black bg-opacity-30">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h3 class="text-4xl font-bold text-white">Simple & Secure Process</h3>
+                    <p class="text-neutral-400 mt-2">Get your services in 3 easy steps.</p>
+                </div>
+                <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+                    <div class="flex flex-col items-center">
+                        <div class="w-24 h-24 rounded-full border-2 border-green-400 flex items-center justify-center text-3xl font-bold text-green-400 mb-4">1</div>
+                        <h4 class="text-xl font-semibold text-white mb-2">Scan & Pay</h4>
+                        <p class="text-neutral-300">Choose your service and scan the QR code to send the payment.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-24 h-24 rounded-full border-2 border-green-400 flex items-center justify-center text-3xl font-bold text-green-400 mb-4">2</div>
+                        <h4 class="text-xl font-semibold text-white mb-2">Confirm Payment</h4>
+                        <p class="text-neutral-300">Contact us on Telegram with your payment screenshot for verification.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-24 h-24 rounded-full border-2 border-green-400 flex items-center justify-center text-3xl font-bold text-green-400 mb-4">3</div>
+                        <h4 class="text-xl font-semibold text-white mb-2">Receive Service</h4>
+                        <p class="text-neutral-300">Once confirmed, we'll promptly deliver the service to your profile or channel.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payment Section -->
+        <section id="payment" class="py-20 px-4">
+            <div class="container mx-auto text-center">
+                   <h3 class="text-4xl font-bold text-white">Make a Payment</h3>
+                   <p class="text-neutral-400 mt-2 mb-8">Click the button below to get the UPI/QR code for payment. Then, contact us on Telegram.</p>
+                   <div class="flex justify-center">
+                     <div class="glass-card p-6 rounded-2xl inline-block">
+                           <!-- QR Code replaced with a button -->
+                           <button onclick="window.open('Templates/payment_qr.html', '_blank', 'width=450,height=600,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes')" class="btn-primary text-black font-bold py-3 px-8 rounded-lg text-lg">
+                               Click here for Payment through UPI/QR Code
+                           </button>
+                           <p class="mt-4 text-white font-semibold">भुगतान के लिए क्लिक करें</p>
+                           <p class="text-neutral-400 text-sm">भुगतान का स्क्रीनशॉट भेजने के लिए इसका उपयोग करें 👇।</p>
+						   <br>
+						   <a href="https://t.me/GARUD_OWNER" target="_blank" class="btn-primary text-black font-bold py-3 px-8 rounded-lg">
+                        Contact on Telegram
+                    </a>
+                     </div>
+                   </div>
+            </div>
+        </section>
+
+        <footer class="py-10 px-4 bg-black bg-opacity-50">
+            <div class="container mx-auto text-center text-neutral-400">
+                <h3 class="text-2xl font-bold text-white mb-2">Mamba Returns</h3>
+                <p class="mb-4">"One Tree, One Life"</p>
+                <div class="flex justify-center mb-6">
+                    <a href="https://t.me/GARUD_OWNER" target="_blank" class="btn-primary text-black font-bold py-3 px-8 rounded-lg">
+                        Contact on Telegram
+                    </a>
+                </div>
+                <div id="location-info" class="text-sm text-neutral-500">
+                    <p>Chandigarh, India</p>
+                    <p id="current-time"></p>
+                </div>
+                <p class="mt-4">&copy; <span id="year"></span> Mamba Returns. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // --- Three.js Advanced 3D Background ---
+        let scene, camera, renderer, particles, mouseX = 0, mouseY = 0;
+        const canvas = document.getElementById('bg-canvas');
+        const windowHalfX = window.innerWidth / 2;
+        const windowHalfY = window.innerHeight / 2;
+
+        function init3D() {
+            // Scene
+            scene = new THREE.Scene();
+
+            // Camera
+            camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 2, 2000);
+            camera.position.z = 1000;
+
+            // Renderer
+            renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+            
+            // Particles
+            const material = new THREE.PointsMaterial({
+                color: 0x00ff96,
+                size: 2,
+                blending: THREE.AdditiveBlending,
+                transparent: true,
+                sizeAttenuation: true,
+                opacity: 0.6
+            });
+
+            const geometry = new THREE.BufferGeometry();
+            const particlesCount = 5000;
+            const posArray = new Float32Array(particlesCount * 3);
+
+            for(let i = 0; i < particlesCount * 3; i++) {
+                posArray[i] = (Math.random() - 0.5) * (Math.random() * 5) * 1000;
+            }
+
+            geometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+            particles = new THREE.Points(geometry, material);
+            scene.add(particles);
+
+            // Event Listeners
+            document.addEventListener('mousemove', onDocumentMouseMove, false);
+            window.addEventListener('resize', onWindowResize, false);
+        }
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+        
+        function onDocumentMouseMove(event) {
+            mouseX = event.clientX - windowHalfX;
+            mouseY = event.clientY - windowHalfY;
+        }
+
+        function animate3D() {
+            requestAnimationFrame(animate3D);
+            const time = Date.now() * 0.00005;
+            
+            camera.position.x += (mouseX - camera.position.x) * 0.05;
+            camera.position.y += (-mouseY - camera.position.y) * 0.05;
+            camera.lookAt(scene.position);
+
+            particles.rotation.y = time * 0.5;
+            particles.rotation.x = time * 0.25;
+
+            renderer.render(scene, camera);
+        }
+
+        // --- Smooth Scrolling ---
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // --- Time and Date ---
+        function updateTime() {
+            const timeElement = document.getElementById('current-time');
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: 'Asia/Kolkata' };
+            timeElement.textContent = now.toLocaleDateString('en-US', options);
+        }
+        
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+
+        // --- Initialization ---
+        init3D();
+        animate3D();
+        updateTime();
+        setInterval(updateTime, 1000); // Update time every second
+    </script>
+</body>
+</html>

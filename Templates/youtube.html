@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamba Returns - YouTube Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+        }
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+        .glass-card {
+            background: rgba(16, 16, 16, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(0, 201, 255, 0.4);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(146, 254, 157, 0.6);
+        }
+        .service-item {
+            background: rgba(16, 16, 16, 0.7);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(0, 255, 150, 0.2);
+        }
+        .service-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 255, 150, 0.15);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="content-wrapper">
+        <header class="fixed top-0 left-0 right-0 z-50">
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center glass-card rounded-b-lg">
+                <h1 class="text-2xl font-bold text-white tracking-wider"><a href="/Mamba Returns Google/index.html">Mamba Returns</a></h1>
+                <a href="https://t.me/GARUD_OWNER" target="_blank" class="btn-primary text-black font-bold py-2 px-5 rounded-lg text-sm">
+                    Contact Us
+                </a>
+            </nav>
+        </header>
+
+        <main class="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-24 md:pt-32">
+            <div class="max-w-4xl w-full">
+                <h2 class="text-5xl md:text-6xl font-black text-white mb-12">YouTube Services</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="service-item p-6 rounded-2xl transition-all duration-300">
+                        <h3 class="text-3xl font-bold text-white mb-4">YouTube Subscribers</h3>
+                        <p class="text-neutral-300 text-lg mb-6">Build a strong subscriber base for your channel.</p>
+                        <div class="flex flex-col items-center gap-4">
+                            <div class="flex justify-between items-center w-full px-4 py-3 bg-neutral-800 rounded-lg">
+                                <span class="text-green-300 font-semibold">1000 Subscribers</span>
+                                <span class="text-white font-bold">₹278</span>
+                            </div>
+                            <img src="F:/Mamba Returns Google/Scanner/qr.jpg" alt="Payment QR Code for 500 YT Subscribers" class="rounded-lg w-40 h-40">
+                            <p class="text-neutral-400 text-sm mt-2">Scan to pay for 1000 YouTube Subscribers.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-item p-6 rounded-2xl transition-all duration-300">
+                        <h3 class="text-3xl font-bold text-white mb-4">YouTube Views</h3>
+                        <p class="text-neutral-300 text-lg mb-6">Increase viewership for your videos.</p>
+                        <div class="flex flex-col items-center gap-4">
+                            <div class="flex justify-between items-center w-full px-4 py-3 bg-neutral-800 rounded-lg">
+                                <span class="text-green-300 font-semibold">1000 Views</span>
+                                <span class="text-white font-bold">₹193</span>
+                            </div>
+                            <img src="F:/Mamba Returns Google/Scanner/qr.jpg" alt="Payment QR Code for 10,000 YT Views" class="rounded-lg w-40 h-40">
+                            <p class="text-neutral-400 text-sm mt-2">Scan to pay for 1000 YouTube Views.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-item p-6 rounded-2xl transition-all duration-300">
+                        <h3 class="text-3xl font-bold text-white mb-4">YouTube Likes</h3>
+                        <p class="text-neutral-300 text-lg mb-6">Boost the engagement on your videos.</p>
+                        <div class="flex flex-col items-center gap-4">
+                            <div class="flex justify-between items-center w-full px-4 py-3 bg-neutral-800 rounded-lg">
+                                <span class="text-green-300 font-semibold">1000 Likes</span>
+                                <span class="text-white font-bold">₹100</span>
+                            </div>
+                            <img src="F:/Mamba Returns Google/Scanner/qr.jpg" alt="Payment QR Code for 500 YT Likes" class="rounded-lg w-40 h-40">
+                            <p class="text-neutral-400 text-sm mt-2">Scan to pay for 1000 YouTube Likes.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-item p-6 rounded-2xl transition-all duration-300">
+                        <h3 class="text-3xl font-bold text-white mb-4">YouTube Watch Time <br>(Not available right now)</h3>
+                        <p class="text-neutral-300 text-lg mb-6">Achieve monetization requirements faster.</p>
+                        <div class="flex flex-col items-center gap-4">
+                            <div class="flex justify-between items-center w-full px-4 py-3 bg-neutral-800 rounded-lg">
+                                <span class="text-green-300 font-semibold">1000 Hours Watch Time</span>
+                                <span class="text-white font-bold">₹₹₹₹</span>
+                            </div>
+                            <img src="F:/Mamba Returns Google/Scanner/qr.jpg" alt="Payment QR Code for 1000 hours YT Watch Time" class="rounded-lg w-40 h-40">
+                            <p class="text-neutral-400 text-sm mt-2">Scan to pay for 1000 Hours YouTube Watch Time.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12">
+                    <a href="https://t.me/GARUD_OWNER" target="_blank" class="btn-primary text-black font-bold py-3 px-8 rounded-lg text-lg">
+                        After Payment, Contact us on Telegram
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="py-10 px-4 bg-black bg-opacity-50">
+            <div class="container mx-auto text-center text-neutral-400">
+                <h3 class="text-2xl font-bold text-white mb-2">Mamba Returns</h3>
+                <p class="mb-4">"One Tree, One Life"</p>
+                <div class="flex justify-center mb-6">
+                    <a href="https://t.me/GARUD_OWNER" target="_blank" class="btn-primary text-black font-bold py-3 px-8 rounded-lg">
+                        Contact on Telegram
+                    </a>
+                </div>
+                <div id="location-info" class="text-sm text-neutral-500">
+                    <p>Sunam Udham Singh Wala, Punjab, India</p>
+                    <p id="current-time"></p>
+                </div>
+                <p class="mt-4">&copy; <span id="year"></span> Mamba Returns. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // --- Three.js Advanced 3D Background ---
+        let scene, camera, renderer, particles, mouseX = 0, mouseY = 0;
+        const canvas = document.getElementById('bg-canvas');
+        const windowHalfX = window.innerWidth / 2;
+        const windowHalfY = window.innerHeight / 2;
+
+        function init3D() {
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 2, 2000);
+            camera.position.z = 1000;
+            renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+            
+            const material = new THREE.PointsMaterial({
+                color: 0x00ff96,
+                size: 2,
+                blending: THREE.AdditiveBlending,
+                transparent: true,
+                sizeAttenuation: true,
+                opacity: 0.6
+            });
+
+            const geometry = new THREE.BufferGeometry();
+            const particlesCount = 5000;
+            const posArray = new Float32Array(particlesCount * 3);
+
+            for(let i = 0; i < particlesCount * 3; i++) {
+                posArray[i] = (Math.random() - 0.5) * (Math.random() * 5) * 1000;
+            }
+
+            geometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+            particles = new THREE.Points(geometry, material);
+            scene.add(particles);
+
+            document.addEventListener('mousemove', onDocumentMouseMove, false);
+            window.addEventListener('resize', onWindowResize, false);
+        }
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+        
+        function onDocumentMouseMove(event) {
+            mouseX = event.clientX - windowHalfX;
+            mouseY = event.clientY - windowHalfY;
+        }
+
+        function animate3D() {
+            requestAnimationFrame(animate3D);
+            const time = Date.now() * 0.00005;
+            
+            camera.position.x += (mouseX - camera.position.x) * 0.05;
+            camera.position.y += (-mouseY - camera.position.y) * 0.05;
+            camera.lookAt(scene.position);
+
+            particles.rotation.y = time * 0.5;
+            particles.rotation.x = time * 0.25;
+
+            renderer.render(scene, camera);
+        }
+
+        // --- Time and Date ---
+        function updateTime() {
+            const timeElement = document.getElementById('current-time');
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: 'Asia/Kolkata' };
+            timeElement.textContent = now.toLocaleDateString('en-US', options);
+        }
+        
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // --- Initialization ---
+        init3D();
+        animate3D();
+        updateTime();
+        setInterval(updateTime, 1000); // Update time every second
+    </script>
+</body>
+</html>
