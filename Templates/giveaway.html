@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamba Returns - Giveaways</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+        }
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+        .glass-card {
+            background: rgba(16, 16, 16, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .page-title {
+            text-shadow: 0 0 15px rgba(0, 255, 150, 0.5), 0 0 30px rgba(0, 255, 150, 0.3);
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(0, 201, 255, 0.4);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(146, 254, 157, 0.6);
+        }
+        .countdown-box {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="content-wrapper">
+        <!-- Header -->
+        <header class="fixed top-0 left-0 right-0 z-50">
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center glass-card rounded-b-lg">
+                <a href="www.mambareturns.store" class="text-2xl font-bold text-white tracking-wider">Mamba Returns</a>
+                <a href="www.mambareturns.store" class="btn-primary text-black font-bold py-2 px-5 rounded-lg text-sm">
+                    Back to Home
+                </a>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="pt-32 pb-20 px-4">
+            <div class="container mx-auto">
+                <div class="text-center mb-16">
+                    <h1 class="text-5xl md:text-7xl font-black text-white page-title tracking-tighter">Giveaways</h1>
+                    <p class="mt-4 text-lg text-neutral-300">Your chance to win big! Participate in our exclusive giveaways.</p>
+                </div>
+
+                <!-- Current Giveaway Section -->
+                <section id="current-giveaway">
+                    <h2 class="text-3xl font-bold text-white text-center mb-8">Live Now: Telegram Channel Boost</h2>
+                    <div class="max-w-4xl mx-auto glass-card rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
+                        <div class="md:w-1/3 text-center">
+                            <img src="https://placehold.co/150x150/0a0a0a/229ED9?text=TG" class="w-40 h-40 mb-4 rounded-full mx-auto" alt="Telegram Icon">
+                        </div>
+                        <div class="md:w-2/3">
+                            <h3 class="text-3xl font-bold text-white">Win 1000 Telegram Members!</h3>
+                            <p class="text-neutral-300 mt-3 mb-5">We're giving away a 1000 members  to one lucky Telegram channel. Increase your reach and community overnight. Entry is simple and free!</p>
+                            <div class="mb-6">
+                                <h4 class="font-semibold text-lg text-green-300 mb-3">Giveaway Ends In:</h4>
+                                <div class="grid grid-cols-4 gap-2 text-center">
+                                    <div class="countdown-box p-3 rounded-lg">
+                                        <span class="text-3xl font-bold">12</span>
+                                        <span class="text-xs block">Days</span>
+                                    </div>
+                                    <div class="countdown-box p-3 rounded-lg">
+                                        <span class="text-3xl font-bold">08</span>
+                                        <span class="text-xs block">Hours</span>
+                                    </div>
+                                    <div class="countdown-box p-3 rounded-lg">
+                                        <span class="text-3xl font-bold">45</span>
+                                        <span class="text-xs block">Mins</span>
+                                    </div>
+                                    <div class="countdown-box p-3 rounded-lg">
+                                        <span class="text-3xl font-bold">22</span>
+                                        <span class="text-xs block">Secs</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="https://t.me/GARUD_NETWORK" target="_blank" class="btn-primary text-black font-bold py-3 px-8 rounded-lg w-full text-center block">
+                                Enter Now on Telegram!
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Upcoming Giveaways Section -->
+                <section id="upcoming-giveaways" class="mt-20">
+                    <h2 class="text-3xl font-bold text-white text-center mb-8">Coming Soon...</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Upcoming Card 1 -->
+                        <div class="glass-card p-8 rounded-2xl text-center opacity-70">
+                            <img src="https://placehold.co/80x80/0a0a0a/ff0000?text=YT" class="w-24 h-24 mb-4 rounded-full mx-auto" alt="YouTube Icon">
+                            <h4 class="text-2xl font-bold text-white mb-2">150 YouTube Subscribers</h4>
+                            <p class="text-neutral-300">Get ready to boost your channel. A massive subscriber giveaway is on the horizon.</p>
+                            <p class="mt-4 text-green-400 font-semibold">Starts soon</p>
+                        </div>
+                        <!-- Upcoming Card 2 -->
+                        <div class="glass-card p-8 rounded-2xl text-center opacity-70">
+                            <img src="https://placehold.co/80x80/0a0a0a/ffffff?text=IG" class="w-24 h-24 mb-4 rounded-full mx-auto" alt="Instagram Icon">
+                            <h4 class="text-2xl font-bold text-white mb-2">Instagram Followers</h4>
+                            <p class="text-neutral-300">A huge follower drop is coming to help a lucky winner dominate Instagram.</p>
+                             <p class="mt-4 text-green-400 font-semibold">Starts soon</p>
+                        </div>
+                        <!-- Upcoming Card 3 -->
+                        <div class="glass-card p-8 rounded-2xl text-center opacity-70">
+                            <img src="https://placehold.co/80x80/0a0a0a/ffffff?text=X" class="w-24 h-24 mb-4 rounded-full mx-auto" alt="Twitter/X Icon">
+                            <h4 class="text-2xl font-bold text-white mb-2">Twitter (X) Engagement</h4>
+                            <p class="text-neutral-300">Prepare for a massive boost in likes and retweets. Your viral moment awaits.</p>
+                             <p class="mt-4 text-green-400 font-semibold">Coming Soon</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="py-10 px-4 bg-black bg-opacity-50">
+            <div class="container mx-auto text-center text-neutral-400">
+                <p>&copy; <span id="year"></span> Mamba Returns. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // --- Three.js Advanced 3D Background ---
+        // This script is identical to the one on the main page for a consistent experience.
+        let scene, camera, renderer, particles, mouseX = 0, mouseY = 0;
+        const canvas = document.getElementById('bg-canvas');
+        const windowHalfX = window.innerWidth / 2;
+        const windowHalfY = window.innerHeight / 2;
+
+        function init3D() {
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 2, 2000);
+            camera.position.z = 1000;
+            renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+            
+            const material = new THREE.PointsMaterial({
+                color: 0x00ff96,
+                size: 2,
+                blending: THREE.AdditiveBlending,
+                transparent: true,
+                sizeAttenuation: true,
+                opacity: 0.6
+            });
+
+            const geometry = new THREE.BufferGeometry();
+            const particlesCount = 5000;
+            const posArray = new Float32Array(particlesCount * 3);
+            for(let i = 0; i < particlesCount * 3; i++) {
+                posArray[i] = (Math.random() - 0.5) * (Math.random() * 5) * 1000;
+            }
+            geometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+            particles = new THREE.Points(geometry, material);
+            scene.add(particles);
+
+            document.addEventListener('mousemove', onDocumentMouseMove, false);
+            window.addEventListener('resize', onWindowResize, false);
+        }
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+        
+        function onDocumentMouseMove(event) {
+            mouseX = event.clientX - windowHalfX;
+            mouseY = event.clientY - windowHalfY;
+        }
+
+        function animate3D() {
+            requestAnimationFrame(animate3D);
+            const time = Date.now() * 0.00005;
+            
+            camera.position.x += (mouseX - camera.position.x) * 0.05;
+            camera.position.y += (-mouseY - camera.position.y) * 0.05;
+            camera.lookAt(scene.position);
+
+            particles.rotation.y = time * 0.5;
+            particles.rotation.x = time * 0.25;
+
+            renderer.render(scene, camera);
+        }
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // --- Initialization ---
+        init3D();
+        animate3D();
+    </script>
+</body>
+</html>
