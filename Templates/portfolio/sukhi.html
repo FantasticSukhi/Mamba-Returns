@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sukhpal Kherera - Network Engineer</title>
+    <meta name="description" content="Sukhpal Kherera's professional portfolio showcasing expertise in Network Engineering, Cloud Infrastructure, and IT Solutions.">
+    <meta name="keywords" content="Sukhpal Kherera, Network Engineer, Networking, IT Infrastructure, Cloud, Cybersecurity, Router, Switch, Firewall, VPN, AI, Python, Web Development">
+    <meta name="author" content="Sukhpal Kherera">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yourportfolio.com"> <meta property="og:title" content="Sukhpal Kherera - Network Engineer">
+    <meta property="og:description" content="Explore the professional portfolio of Sukhpal Kherera, a Network Engineer at NIC Chandigarh specializing in robust IT infrastructure and secure network solutions, alongside AI and Python development skills.">
+    <meta property="og:image" content="https://www.yourportfolio.com/preview.jpg"> <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.yourportfolio.com"> <meta property="twitter:title" content="Sukhpal Kherera - Network Engineer">
+    <meta property="twitter:description" content="Explore the professional portfolio of Sukhpal Kherera, a Network Engineer at NIC Chandigarh specializing in robust IT infrastructure and secure network solutions, alongside AI and Python development skills.">
+    <meta property="twitter:image" content="https://www.yourportfolio.com/preview.jpg"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-blue: #007bff; /* A vibrant professional blue */
+            --primary-gold: #FFD700; /* Gold accent, could also be a lighter blue/cyan */
+            --dark-bg: #121212; /* Dark background for depth */
+            --card-bg: #1e1e1e; /* Slightly lighter for cards */
+            --text-light: #e0e0e0;
+            --text-dark: #f5f5f5;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --transition-speed: 0.3s ease;
+            --max-width: 1200px;
+        }
+
+        /* Base Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.7;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            margin-top: 0;
+            line-height: 1.3;
+        }
+
+        a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            transition: color var(--transition-speed);
+        }
+
+        a:hover {
+            color: var(--primary-gold);
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header / Navigation */
+        header {
+            background-color: rgba(18, 18, 18, 0.95); /* Semi-transparent for subtle effect */
+            padding: 1rem 0;
+            position: sticky; /* Sticky nav */
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+            letter-spacing: -0.05em;
+        }
+        .logo span {
+            color: var(--primary-blue);
+        }
+
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 2.5rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 1.05rem;
+            position: relative;
+            padding-bottom: 0.3rem;
+            color: var(--text-light);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary-blue);
+            transition: width var(--transition-speed);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+        
+        .nav-links a.active {
+            color: var(--primary-blue);
+        }
+
+        /* Hero Section */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden; /* Important for particles */
+            padding: 2rem 0;
+            background-color: #000000; /* Ensure black background for space effect */
+        }
+
+        /* Particle container styling */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0; /* Behind the content */
+            background-color: #000000; /* Ensure background is black */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2; /* On top of particles */
+            max-width: 900px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            background: linear-gradient(45deg, var(--primary-blue), var(--primary-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
+        }
+
+        .hero-content p {
+            font-size: 1.6rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-blue);
+            color: var(--text-dark);
+            padding: 0.9rem 2.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background-color var(--transition-speed), transform 0.2s ease;
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+        }
+
+        .btn:hover {
+            background-color: var(--primary-gold);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        section:nth-of-type(even) {
+            background-color: var(--card-bg); /* Alternate background for sections */
+        }
+
+        section h2 {
+            font-size: 3.2rem;
+            margin-bottom: 4rem;
+            color: var(--primary-blue);
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-gold);
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        #about .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        #about .about-text {
+            flex: 2;
+            min-width: 300px;
+        }
+        #about .profile-img {
+            flex: 1;
+            min-width: 200px;
+            max-width: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            border: 3px solid var(--primary-blue);
+        }
+        #about .profile-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px; /* Inner rounding */
+        }
+        #about p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+        #about strong {
+            color: var(--primary-gold);
+        }
+
+        /* Skills Section */
+        #skills .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        #skills .skill-category {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: left;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        #skills .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 123, 255, 0.2);
+        }
+        #skills .skill-category h3 {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        #skills .skill-category h3 i {
+            font-size: 1.8rem;
+            color: var(--primary-gold);
+        }
+        #skills .skill-category ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+        #skills .skill-category li {
+            margin-bottom: 0.6rem;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        #skills .skill-category li::before {
+            content: '\f058'; /* Check circle icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-size: 0.9rem;
+            top: 3px;
+        }
+
+        /* Experience Section */
+        #experience .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 0 0 2rem; /* Left padding for line */
+        }
+        #experience .timeline::before {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            width: 4px;
+            background-color: var(--primary-blue);
+            height: 100%;
+            border-radius: 2px;
+        }
+        #experience .timeline-item {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.8rem;
+            margin-bottom: 2.5rem;
+            text-align: left;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease;
+        }
+        #experience .timeline-item:hover {
+            transform: translateX(10px);
+        }
+        #experience .timeline-item::before { /* Circle on the line */
+            content: '';
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: var(--primary-gold);
+            left: -1.8rem; /* Position relative to .timeline-item */
+            top: 2rem;
+            border: 4px solid var(--dark-bg); /* "Cut out" effect */
+        }
+        #experience .timeline-item h3 {
+            color: var(--primary-gold);
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+        #experience .timeline-item p.duration {
+            color: var(--primary-blue);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        #experience .timeline-item ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 1rem;
+        }
+        #experience .timeline-item li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+            font-size: 0.95rem;
+        }
+        #experience .timeline-item li::before {
+            content: '\f0da'; /* Caret right icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary-gold);
+            font-size: 0.8rem;
+            top: 5px;
+        }
+
+        /* Projects Section */
+        #projects .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+        #projects .project-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        #projects .project-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 25px rgba(0, 123, 255, 0.2);
+        }
+        #projects .project-card img {
+            width: 100%;
+            height: 200px; /* Fixed height for consistency */
+            object-fit: cover;
+            display: block;
+            border-bottom: 1px solid var(--border-color);
+        }
+        #projects .project-info {
+            padding: 1.5rem;
+        }
+        #projects .project-info h3 {
+            font-size: 1.5rem;
+            color: var(--primary-gold);
+            margin-bottom: 0.5rem;
+        }
+        #projects .project-info p {
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+        #projects .project-info .tech-stack {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        #projects .project-links {
+            margin-top: 1rem;
+        }
+        #projects .project-links a {
+            margin-right: 1.2rem;
+            font-size: 1rem;
+            font-weight: 500;
+            white-space: nowrap; /* Prevent breaking */
+        }
+        #projects .project-links a i {
+            margin-right: 0.5rem;
+        }
+
+
+        /* Contact Section */
+        #contact .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        #contact .contact-info-card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        #contact .contact-info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+        }
+        #contact .contact-info-card i {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            flex-shrink: 0;
+        }
+        #contact .contact-info-card div {
+            flex-grow: 1;
+        }
+        #contact .contact-info-card h3 {
+            font-size: 1.2rem;
+            color: var(--primary-gold);
+            margin-bottom: 0.3rem;
+        }
+        #contact .contact-info-card p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        #contact .contact-info-card a {
+            font-size: 0.95rem;
+        }
+        #contact .social-links {
+            margin-top: 3rem;
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+        }
+        #contact .social-links a {
+            font-size: 2.8rem;
+            color: var(--text-light);
+            transition: color var(--transition-speed), transform 0.3s ease;
+        }
+        #contact .social-links a:hover {
+            color: var(--primary-gold);
+            transform: translateY(-5px) scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--card-bg);
+            color: #aaa;
+            text-align: center;
+            padding: 1.5rem 0; /* Reduced padding */
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 0; /* Removed margin-top */
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+            .nav-links {
+                display: none; /* Hide nav links on smaller screens for now */
+            }
+            /* You'd typically add a hamburger menu here */
+            #hero h1 {
+                font-size: 3rem;
+            }
+            #hero p {
+                font-size: 1.2rem;
+            }
+            section {
+                padding: 4rem 0;
+            }
+            section h2 {
+                font-size: 2.5rem;
+                margin-bottom: 3rem;
+            }
+            #about .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            #about .profile-img {
+                margin-bottom: 2rem;
+            }
+            #skills .skills-grid,
+            #projects .projects-grid,
+            #contact .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            #experience .timeline {
+                padding-left: 1rem; /* Adjust for smaller screens */
+            }
+            #experience .timeline::before {
+                left: 0.5rem;
+            }
+            #experience .timeline-item::before {
+                left: -1.3rem;
+            }
+            #projects .project-card img {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#hero" class="logo">Sukhpal<span> Kherera</span></a>
+                <ul class="nav-links">
+                    <li><a href="#hero" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div id="particles-js"></div> <div class="hero-content">
+                <p>Hello, I'm</p>
+                <h1>Sukhpal Kherera</h1>
+                <p>A Network Engineer Crafting Resilient IT Infrastructure</p>
+                <a href="#projects" class="btn">View My Work <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            Hello! I'm Sukhpal Kherera, a dedicated and innovative technologist with a Master's degree in Computer Applications and a certification as a Python Developer. My professional journey is driven by a profound passion for designing, implementing, and securing robust network infrastructures to solve complex problems and ensure seamless digital operations.
+                        </p>
+                        <p>
+                            Currently, I am contributing my expertise as a Network Engineer at the National Informatics Centre (NIC) in Chandigarh. Here, I am responsible for managing and optimizing critical government network systems, ensuring high availability, performance, and security for essential public services. My role at NIC allows me to blend my technical proficiency with a commitment to public service and digital transformation.
+                        </p>
+                        <p>
+                            My core philosophy revolves around continuous learning and embracing new challenges in the ever-evolving IT landscape. I thrive on building reliable and efficient network solutions, whether it's through configuring complex routing protocols, implementing advanced security measures, or automating network tasks with scripting. I am always keen to collaborate on projects that push the boundaries of what's possible and make a tangible difference in network resilience and performance.
+                        </p>
+                    </div>
+                    <div class="profile-img">
+                        <img src="https://via.placeholder.com/300x300/007bff/ffffff?text=Your+Photo" alt="Sukhpal Kherera Profile">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2>My Core Competencies</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-network-wired"></i> Network Engineering</h3>
+                        <ul>
+                            <li>Network Design & Architecture</li>
+                            <li>Routing & Switching (Cisco, Juniper)</li>
+                            <li>Firewall & VPN Configuration</li>
+                            <li>LAN/WAN Technologies</li>
+                            <li>Network Monitoring & Troubleshooting</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-shield-alt"></i> Cybersecurity & Cloud</h3>
+                        <ul>
+                            <li>Network Security Implementation</li>
+                            <li>Intrusion Detection/Prevention Systems (IDS/IPS)</li>
+                            <li>Vulnerability Management</li>
+                            <li>Cloud Networking (AWS VPC, Azure VNet)</li>
+                            <li>Basic SIEM Operations</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fab fa-python"></i> Scripting & Automation</h3>
+                        <ul>
+                            <li>Python for Network Automation (Netmiko, Paramiko)</li>
+                            <li>Bash Scripting</li>
+                            <li>Ansible for Network Configuration</li>
+                            <li>API Integration for Network Devices</li>
+                            <li>Data Parsing & Report Generation</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-server"></i> Server & OS Management</h3>
+                        <ul>
+                            <li>Linux Server Administration</li>
+                            <li>Windows Server Administration</li>
+                            <li>Virtualization (VMware, KVM)</li>
+                            <li>Active Directory & DNS Management</li>
+                            <li>Hardware Troubleshooting</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-database"></i> Databases & Data Storage</h3>
+                        <ul>
+                            <li>MySQL, PostgreSQL basics</li>
+                            <li>Data Backup & Recovery Principles</li>
+                            <li>Storage Area Networks (SAN) basics</li>
+                            <li>Network Attached Storage (NAS) basics</li>
+                            <li>Data Integrity & Availability</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-tools"></i> Tools & Methodologies</h3>
+                        <ul>
+                            <li>Git, GitHub, Version Control</li>
+                            <li>ITIL Principles</li>
+                            <li>Problem Solving & Incident Response</li>
+                            <li>Documentation & Diagramming (Visio)</li>
+                            <li>Project Management (Agile/Scrum basics)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="container">
+                <h2>Professional Journey</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Network Engineer</h3>
+                        <p class="duration">July 2024 - Present | National Informatics Centre (NIC), Chandigarh</p>
+                        <ul>
+                            <li>Managed, configured, and optimized network infrastructure including routers, switches, and firewalls for critical government systems.</li>
+                            <li>Implemented and maintained network security policies to protect sensitive data and ensure compliance.</li>
+                            <li>Monitored network performance, identified bottlenecks, and troubleshot complex network issues to ensure high availability and reliability.</li>
+                            <li>Contributed to network design and expansion projects, ensuring scalability and adherence to best practices.</li>
+                            <li>Utilized scripting (Python/Bash) to automate routine network tasks and improve operational efficiency.</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Freelance IT Solutions Provider / Python Developer</h3>
+                        <p class="duration">[Start Date] - [End Date/Present] | Self-Employed</p>
+                        <ul>
+                            <li>Provided consulting and implementation services for small business IT infrastructure, including basic network setup and cybersecurity best practices.</li>
+                            <li>Developed custom Python scripts for data automation and system administration tasks for various clients.</li>
+                            <li>Assisted clients with cloud service integration and general technical support.</li>
+                            <li>Managed and resolved technical issues, ensuring client satisfaction and operational continuity.</li>
+                        </ul>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/400x200/007bff/ffffff?text=AI+Tool+Image" alt="AI-Powered Document Analyzer">
+                        <div class="project-info">
+                            <h3>AI-Powered Document Analyzer</h3>
+                            <p>A sophisticated AI tool automating the analysis and categorization of large volumes of unstructured text documents, significantly reducing manual processing time and enhancing data extraction accuracy.</p>
+                            <p class="tech-stack">Tech Stack: Python, TensorFlow, Keras, NLP, Flask, MongoDB</p>
+                            <div class="project-links">
+                                <a href="YOUR_PROJECT_DEMO_LINK" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="YOUR_PROJECT_GITHUB_LINK" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/400x200/FFD700/000000?text=Game+Image" alt="Quantum Leaper Game">
+                        <div class="project-info">
+                            <h3>Quantum Leaper (3D Interactive Game)</h3>
+                            <p>A web-based 3D game featuring interactive environments and advanced physics, developed to explore the capabilities of Three.js and real-time rendering in browsers for immersive user experiences.</p>
+                            <p class="tech-stack">Tech Stack: JavaScript, Three.js, GSAP, HTML5, CSS3</p>
+                            <div class="project-links">
+                                <a href="YOUR_PROJECT_DEMO_LINK" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="YOUR_PROJECT_GITHUB_LINK" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/400x200/800080/ffffff?text=Telegram+Bot+Image" alt="Secure Telegram Bot">
+                        <div class="project-info">
+                            <h3>Secure Telegram Bot & Admin Panel</h3>
+                            <p>Engineered a custom Telegram bot for secure data management and automated tasks, complemented by a web-based admin panel for granular control and analytics, featuring user authentication and real-time notifications.</p>
+                            <p class="tech-stack">Tech Stack: Python (python-telegram-bot), Flask-Admin, PostgreSQL, Docker</p>
+                            <div class="project-links">
+                                <a href="YOUR_PROJECT_DEMO_LINK" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="YOUR_PROJECT_GITHUB_LINK" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <p style="margin-bottom: 3rem;">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out!</p>
+                <div class="contact-grid">
+                    <div class="contact-info-card">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email Me</h3>
+                            <a href="mailto:sukhkherera222@gmail.com">sukhkherera222@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-card">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Call Me</h3>
+                            <p><a href="tel:+91-6280518579">+91 6280518579</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Chandigarh, India</p>
+                        </div>
+                    </div>
+					<div class="contact-info-card">
+                        <i class="fas fa-message"></i>
+                        <div>
+                            <h3>Message me on Telegram</h3>
+                            <a href="https://t.me/GARUD_OWNER">Sukhpal Kherera</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="YOUR_LINKEDIN_PROFILE" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="YOUR_GITHUB_PROFILE" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="YOUR_TWITTER_PROFILE" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sukhpal Kherera. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Update active class
+                document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Function to set active nav link on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                // Adjust this value for when the active link changes, e.g., sectionHeight / 2 or 100 (pixels)
+                if (scrollY >= sectionTop - sectionHeight / 3) { 
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Initialize particles.js
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 150, // Number of particles
+                    "density": {
+                        "enable": true,
+                        "value_area": 800 // Area density
+                    }
+                },
+                "color": {
+                    "value": "#ffffff" // White particles
+                },
+                "shape": {
+                    "type": "circle", // Particles are circles
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5, // Particle opacity
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 2, // Particle size
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": false, // No lines between particles
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 0.8, // Slow movement for a subtle effect
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "bubble" // Particles subtly react on hover
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "repulse" // Push particles away on click
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 200,
+                        "size": 4,
+                        "duration": 2,
+                        "opacity": 0.8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 100,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>
