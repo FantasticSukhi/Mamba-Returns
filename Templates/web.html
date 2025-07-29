@@ -77,6 +77,43 @@
             background-clip: text;
             color: transparent; /* Fallback for non-webkit browsers */
         }
+        .home-button-container {
+            position: absolute; /* Position relative to the nearest positioned ancestor, or body */
+            top: 20px; /* Adjust as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10; /* Ensure it's above other content */
+            width: 100%; /* Take full width to center effectively */
+            max-width: 1200px; /* Match your content max-width if desired */
+            padding: 0 1.5rem; /* Add padding for smaller screens */
+            box-sizing: border-box;
+            display: flex;
+            justify-content: flex-start; /* Align to the left within its container */
+        }
+        @media (min-width: 768px) {
+            .home-button-container {
+                justify-content: flex-start; /* Still left-aligned */
+                padding: 0 3rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            .home-button-container {
+                padding: 0 6rem;
+            }
+        }
+        .home-button {
+            background-color: #2a2a2a; /* Dark background for the button */
+            color: #e0e0e0;
+            font-weight: 500;
+            padding: 0.5rem 1.25rem;
+            border-radius: 6px;
+            border: 1px solid #444;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+        }
+        .home-button:hover {
+            background-color: #3a3a3a;
+            border-color: #007bff;
+        }
     </style>
 </head>
 <body class="overflow-x-hidden">
@@ -84,11 +121,15 @@
     <canvas id="bg-canvas"></canvas>
 
     <div class="content-wrapper">
+        <!-- Home Button at the top -->
+        <div class="home-button-container">
+            <a href="index.html" class="home-button">
+                Home
+            </a>
+        </div>
+
         <!-- Main Content for Web Development Services Page -->
         <main class="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-16 md:pt-24 pb-16 container-padding">
-        <a href="https://mambareturns.store" target="_blank" class="btn-primary text-black font-bold py-2 px-5 rounded-lg text-sm">
-            Home
-        </a>
             <div class="max-w-6xl w-full">
                 <h2 class="text-4xl md:text-6xl font-extrabold text-gradient-heading mb-12 leading-tight">
                     Innovative Web Development Solutions
